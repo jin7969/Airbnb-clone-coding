@@ -20,7 +20,7 @@ function Main() {
       setOptionsData(dummy.options)
     };
     fetchData();
-  }, [])
+  })
 
   return (
     <>

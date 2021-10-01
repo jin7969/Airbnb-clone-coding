@@ -348,7 +348,8 @@ a {
 }
 
 .search__location {
-  width: 267px;
+  width: 269px;
+  height: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -364,6 +365,7 @@ a {
   height: 17px;
   border-style: none;
   font-size: 14px;
+  background-color: transparent;
   color: #959595;
 }
 .search__location > input:focus {
@@ -372,6 +374,7 @@ a {
 
 .search__checkIn {
   width: 178px;
+  height: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -384,6 +387,7 @@ a {
 
 .search__checkOut {
   width: 178px;
+  height: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -396,57 +400,19 @@ a {
 
 .search__box {
   width: 239px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-/* 모달창 -------------------------------------------------------------*/
-
-.location {
-  width: 500px;
-  height: 160px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.search__location:hover,
+.search__checkIn:hover,
+.search__checkOut:hover,
+.search__box:hover {
   border-radius: 32px;
-  background-color: #ffffff;
-  position: absolute;
-  left: 24%;
-  top: 29%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.location__container {
-  width: 436px;
-  height: 128px;
-}
-
-.location__text {
-  font-size: 12px;
-  font-weight: 600;
-  margin-top: 8px;
-  padding-top: 16px;
-}
-
-.location__button {
-  width: 436px;
-  height: 58px;
-  margin-top: 20px;
-  border-radius: 32px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 386px;
-  height: 40px;
-  padding: 8px 24px;
-  font-size: 18px;
-  font-weight: 800;
-  color: #831ea8;
+  cursor: pointer;
+  background-color: #ebebeb;
 }
 
 .box__personnel div {

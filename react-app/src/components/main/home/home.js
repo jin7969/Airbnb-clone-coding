@@ -7,14 +7,14 @@ import HomeNavbar from './home_navbar';
 import Quarantine from './quarantine';
 
 function Home() {
-  const [modal, setModal] = useState(false);
   const [fixed, setFixed] = useState(false);
+  const [type, setType] = useState("");
   const searchRef = useRef();
 
   useEffect(() => {
     let handler = event => {
       if (!searchRef.current.contains(event.target)) {
-        setModal(false);
+        setType("");
       }
     };
 
@@ -33,8 +33,8 @@ function Home() {
     }
   })
 
-  const toggleModal = () => {
-    setModal(!modal)
+  const modalType = (type) => {
+    setType(type)
   }
 
   return (
@@ -45,7 +45,7 @@ function Home() {
       }
       <Quarantine />
       <HomeNavbar />
-      <Search toggleModal={toggleModal} modal={modal} searchRef={searchRef} />
+      <Search type={type} modalType={modalType} searchRef={searchRef} />
       <Container />
     </section >
   )

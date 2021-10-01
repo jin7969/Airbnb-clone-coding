@@ -1,34 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../../../css/main.module.css'
+import ModalCalendar from './search_modal/modal_calendar'
+import ModalGuest from './search_modal/modal_guest'
+import ModalLocation from './search_modal/modal_location'
 
-function Search({ toggleModal, modal, searchRef }) {
+function Search({ type, modalType, searchRef }) {
+
   return (
     <div className={styles.search} ref={searchRef}>
-      <div className={styles.search__location} onClick={() => toggleModal()}>
-        <div className={styles.search__subject}>위치</div>
-        <input
-          type="text"
-          className={styles.search__location__input}
-          placeholder="어디로 여행가세요?"
-        />
+      <div className={styles.search__container}>
+        <div className={styles.search__location} onClick={() => modalType('location')}>
+          <div className={styles.search__subject}>위치</div>
+          <input
+            type="text"
+            className={styles.search__location__input}
+            placeholder="어디로 여행가세요?"
+          />
+        </div>
       </div>
+      <ModalLocation type={type === 'location'} />
+
       <div className={styles.search__line}></div>
-      <div className={styles.search__checkIn}>
+      <div className={styles.search__checkIn} onClick={() => modalType('calendar')}>
         <div className={styles.search__subject}>체크인</div>
         <div className={styles.search__click}>날짜입력</div>
       </div>
       <div className={styles.search__line}></div>
-      <div className={styles.search__checkOut}>
+      <div className={styles.search__checkOut} onClick={() => modalType('calendar')}>
         <div className={styles.search__subject}>체크아웃</div>
         <div className={styles.search__click}>날짜입력</div>
       </div>
+      <ModalCalendar type={type === 'calendar'} />
+
       <div className={styles.search__line}></div>
       <div className={styles.search__box}>
-        <div className={styles.box__personnel}>
+        <div className={styles.box__personnel} onClick={() => modalType('guest')}>
           <div className={styles.search__subject}>인원</div>
           <div className={styles.search__click}>게스트 추가</div>
         </div>
-        <div className={styles.box__button}>
+        <div className={styles.box__button} onClick={() => modalType('location')}>
           <svg
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
@@ -53,20 +63,7 @@ function Search({ toggleModal, modal, searchRef }) {
           </svg>
         </div>
       </div>
-      {/* Modal */}
-      {modal &&
-        <div className={styles.location} >
-          <div className={styles.location__container}>
-            <div className={styles.location__text}>언제 어디로든 떠나는 여행</div>
-            <div className={styles.location__button}>
-              <div className={styles.button}>
-                <div>유연한 검색</div>
-                <i className="fas fa-chevron-right"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      }
+      <ModalGuest type={type === 'guest'} />
     </div>
   )
 }
