@@ -335,10 +335,17 @@ a {
   font-weight: 800;
 }
 
-.search__click {
+.search__guest {
   height: 17px;
   font-size: 14px;
   color: #959595;
+}
+
+.totalCount {
+  height: 17px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
 }
 
 .search__line {

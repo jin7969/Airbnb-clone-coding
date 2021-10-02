@@ -5,18 +5,59 @@ import ModalGuest from './search_modal/modal_guest'
 import ModalLocation from './search_modal/modal_location'
 
 function Search({ type, modalType, searchRef }) {
+  const [guest, setGuest] = useState(true);
+  const [category, setCategory] = useState([
+    {
+      id: 1,
+      main: "성인",
+      sub: "만 13세 이상",
+      count: 0
+    },
+    {
+      id: 2,
+      main: "어린이",
+      sub: "만 2~12세",
+      count: 0
+    },
+    {
+      id: 3,
+      main: "유아",
+      sub: "만 2세 미만",
+      count: 0
+    }
+  ]);
+
+  const handlePlus = item => {
+    setCategory(category =>
+      category.map(i => {
+        if (item.id === i.id) {
+          return { ...item, count: item.count + 1 };
+        }
+        return i
+      })
+    )
+  }
+
+  const handleMinus = item => {
+    setCategory(category =>
+      category.map(i => {
+        if (item.id === i.id && item.count > 0) {
+          return { ...item, count: item.count - 1 };
+        }
+        return i
+      })
+    )
+  }
 
   return (
     <div className={styles.search} ref={searchRef}>
-      <div className={styles.search__container}>
-        <div className={styles.search__location} onClick={() => modalType('location')}>
-          <div className={styles.search__subject}>위치</div>
-          <input
-            type="text"
-            className={styles.search__location__input}
-            placeholder="어디로 여행가세요?"
-          />
-        </div>
+      <div className={styles.search__location} onClick={() => modalType('location')}>
+        <div className={styles.search__subject}>위치</div>
+        <input
+          type="text"
+          className={styles.search__location__input}
+          placeholder="어디로 여행가세요?"
+        />
       </div>
       <ModalLocation type={type === 'location'} />
 
@@ -36,7 +77,10 @@ function Search({ type, modalType, searchRef }) {
       <div className={styles.search__box}>
         <div className={styles.box__personnel} onClick={() => modalType('guest')}>
           <div className={styles.search__subject}>인원</div>
-          <div className={styles.search__click}>게스트 추가</div>
+          {!guest
+            ? <div className={styles.search__guest}>게스트 추가</div>
+            : <div className={styles.totalCount}>게스트 {category.reduce((acc, cur) => { return acc += cur.count }, 0)}명</div>
+          }
         </div>
         <div className={styles.box__button} onClick={() => modalType('location')}>
           <svg
@@ -63,7 +107,7 @@ function Search({ type, modalType, searchRef }) {
           </svg>
         </div>
       </div>
-      <ModalGuest type={type === 'guest'} />
+      <ModalGuest type={type === 'guest'} category={category} plus={handlePlus} minus={handleMinus} />
     </div>
   )
 }
