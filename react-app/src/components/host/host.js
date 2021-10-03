@@ -1,4 +1,4 @@
-import HostMain from "./main/host_main";
+import HostMain from "./host_main/host_main";
 import HostPlace from "./host_place";
 import HostIncome from "./income/host_income";
 import HostData from "./host_data";

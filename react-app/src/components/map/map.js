@@ -6,7 +6,6 @@ import GoogleMap from './googleMap';
 import Footer from '../main/footer';
 
 function Map() {
-
   return (
     <>
       <Navbar />

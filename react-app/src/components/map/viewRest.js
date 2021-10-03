@@ -3,7 +3,15 @@ import styles from '../../css/map.module.css'
 import dummy from './data.json'
 import ViewSlider from './viewSlider'
 
-function ViewRest({ i, host, h3, h2, option1, option2, option3, option4, num, review }) {
+function ViewRest({ i, host, h3, h2, option1, option2, option3, option4, num, review, toggleModal, list, wishImg }) {
+  const toggleType = () => {
+    if (list === 0) {
+      toggleModal("none")
+    } else {
+      toggleModal("list")
+    }
+    wishImg(dummy.imgData[i].image1);
+  }
   return (
     <div className={styles.main__rest}>
       <div className={styles.main__section}>
@@ -19,7 +27,7 @@ function ViewRest({ i, host, h3, h2, option1, option2, option3, option4, num, re
               <h3>{h3}</h3>
               <h2>{h2}</h2>
             </div>
-            <button className={styles.view__heart}>
+            <button className={styles.view__heart} onClick={toggleType}>
               <i className="far fa-heart"></i>
             </button>
           </div>

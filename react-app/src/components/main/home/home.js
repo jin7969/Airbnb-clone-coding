@@ -12,13 +12,17 @@ function Home() {
   const searchRef = useRef();
 
   useEffect(() => {
+    console.log("useEffect")
     let handler = event => {
+      console.log("click")
       if (!searchRef.current.contains(event.target)) {
         setType("");
       }
     };
 
     let handleScroll = () => {
+      console.log("scroll")
+
       if (window.scrollY > 80) {
         setFixed(true);
       } else {
@@ -31,7 +35,7 @@ function Home() {
       document.removeEventListener('scroll', handleScroll);
       document.removeEventListener("mousedown", handler);
     }
-  })
+  }, [])
 
   const modalType = (type) => {
     setType(type)

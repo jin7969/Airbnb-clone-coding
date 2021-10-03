@@ -5,7 +5,7 @@ import ModalGuest from './search_modal/modal_guest'
 import ModalLocation from './search_modal/modal_location'
 
 function Search({ type, modalType, searchRef }) {
-  const [guest, setGuest] = useState(true);
+  const [guest] = useState(true);
   const [category, setCategory] = useState([
     {
       id: 1,

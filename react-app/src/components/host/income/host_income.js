@@ -17,7 +17,6 @@ function HostIncome() {
     document.body.classList.add("activeModal");
   } else {
     document.body.classList.remove("activeModal");
-
   }
 
   return (
