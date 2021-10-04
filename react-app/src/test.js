@@ -1,21 +1,11 @@
-import React from 'react';
-import Hello from './user';
-import Home from './home'
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import React from 'react'
 
 function Test() {
   return (
-    <BrowserRouter>
+    <div>
 
-      <Link to='/'>HOME</Link> <br />
-      <Link to='/hello/value1/value2'>HELLO</Link>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/hello/:key1/:key2' component={Hello} />
-      </Switch>
-
-    </BrowserRouter>
-  );
+    </div>
+  )
 }
 
-export default Test;
+export default Test

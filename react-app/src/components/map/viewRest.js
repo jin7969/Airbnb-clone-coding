@@ -12,6 +12,7 @@ function ViewRest({ i, host, h3, h2, option1, option2, option3, option4, num, re
     }
     wishImg(dummy.imgData[i].image1);
   }
+
   return (
     <div className={styles.main__rest}>
       <div className={styles.main__section}>
