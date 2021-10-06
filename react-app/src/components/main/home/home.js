@@ -5,8 +5,13 @@ import Search from "./search";
 import Container from './container';
 import HomeNavbar from './home_navbar';
 import Quarantine from './quarantine';
+import { useMediaQuery } from 'react-responsive';
+import ResSearch from './ResSearch';
 
 function Home() {
+  const responsive = useMediaQuery({
+    query: "(max-width:767px)"
+  });
   const [fixed, setFixed] = useState(false);
   const [type, setType] = useState("");
   const searchRef = useRef();
@@ -44,9 +49,12 @@ function Home() {
         : null
       }
       <Quarantine />
+      {responsive &&
+        <ResSearch fixed={fixed} />
+      }
       <HomeNavbar />
       <Search type={type} modalType={modalType} searchRef={searchRef} />
-      <Container />
+      <Container responsive={responsive} />
     </section >
   )
 }

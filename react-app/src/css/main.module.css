@@ -123,16 +123,11 @@ table {
   border-spacing: 0;
 }
 
-h1 {
-  font-size: 100px;
-}
-
 /* 공통 */
 h1 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 52px;
-  padding-bottom: 16px;
+  padding-bottom: 1.5rem;
 }
 
 a {
@@ -145,20 +140,21 @@ a {
 .main {
   background: url("https://a0.muscache.com/im/pictures/57b9f708-bb12-498c-bc33-769f8fc43e63.jpg?im_w=2560")
     bottom/cover no-repeat;
-  width: 1519px;
-  height: 670px;
+  width: 100%;
+  height: 92.7vh;
 }
 
 .quarantine {
+  width: 100%;
+  height: 7.8vh;
   text-align: center;
   background-color: #222222;
-  height: 57px;
 }
 
 .quarantine a {
-  line-height: 57px;
+  line-height: 3.8em;
   color: #a3a3a3;
-  font-size: 14px;
+  font-size: 0.88em;
   font-weight: 600;
   text-decoration: underline;
 }
@@ -175,21 +171,17 @@ a {
 }
 
 .navbar__fixed {
-  height: 80px;
-  padding: 0 80px;
   display: flex;
+  position: fixed;
   align-items: center;
   justify-content: space-between;
-}
-
-.navbar__fixed {
-  position: fixed;
+  width: 90%;
+  height: 11vh;
+  padding: 0 5em;
   top: 0;
-  width: 1359px;
   z-index: 1;
   box-shadow: 0 0 8px rgb(224, 223, 223);
   background-color: #ffffff;
-  transition: all 300ms ease-in;
 }
 
 .navbar__logo {
@@ -262,10 +254,10 @@ a {
 /* navbar 검색창 */
 
 .navSearch {
-  width: 290px;
-  height: 48px;
-  padding-left: 8px;
-  margin-left: 100px;
+  width: 19vw;
+  height: 6.6vh;
+  margin-left: 6em;
+  padding-left: 0.4vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -444,9 +436,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1359px;
-  height: 387px;
-  padding: 40px 80px 40px 80px;
+  width: 88vw;
+  height: 53.6vh;
+  padding: 2.5em 5em;
+  margin: 0;
 }
 
 .container__title {
@@ -454,22 +447,23 @@ a {
 }
 
 .title__text {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
 }
 
 .title__button {
   background-color: #ffffff;
   margin-top: 20px;
-  width: 205px;
-  height: 64px;
+  width: 13.3vw;
+  height: 8.8vh;
   border-radius: 30px;
   border-style: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .title__button:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   transition: all 200ms ease-in;
 }
 
@@ -732,4 +726,50 @@ a {
 .contact__icon i,
 svg {
   font-size: 18px;
+}
+
+@media screen and (max-width: 769px) {
+  .main {
+    height: 133vh;
+  }
+  .navbar,
+  .search,
+  .navbar__fixed {
+    display: none;
+  }
+  .container {
+    height: 120vh;
+    padding: 2.5em 0;
+    margin: auto;
+  }
+  .resNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 11vh;
+  }
+  .resSearch {
+    width: 90vw;
+    height: 6.37vh;
+    line-height: 6.3vh;
+    text-align: center;
+    border-radius: 24px;
+    background-color: #ffffff;
+  }
+  .resSearch i {
+    color: #ff385c;
+    margin-right: 0.6em;
+  }
+  .resSearch span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .title__text {
+    line-height: 1.3em;
+  }
+  .title__button {
+    width: 157px;
+    height: 49px;
+  }
 }
