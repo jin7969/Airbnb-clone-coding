@@ -479,12 +479,12 @@ a {
 
 .lookAround {
   height: 220px;
-  padding: 23px 80px;
+  padding: 28px 80px;
 }
 
 .lookAround__city {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .city__child {
@@ -520,8 +520,8 @@ a {
 /* option */
 
 .option {
-  margin: 40px 0;
-  padding: 0 80px;
+  margin: 2vw 0;
+  padding: 0 5.2vw;
 }
 
 .option__container {
@@ -533,28 +533,28 @@ a {
 }
 
 .option__image {
-  width: 326px;
-  height: 326px;
+  width: 21.4vw;
+  height: 21.4vw;
   border-radius: 8px;
 }
 
 .option__description {
   margin-top: 6px;
-  font-size: 18px;
+  font-size: 1.12em;
   font-weight: 600;
   color: #222222;
 }
 
 /* hosting */
 .hosting {
-  margin-top: 80px;
-  padding: 0 80px;
+  margin-top: 5.2vw;
+  padding: 0 5.2vw;
   position: relative;
 }
 
 .hosting__image {
-  width: 1359px;
-  height: 482px;
+  width: 89.4vw;
+  height: 31.7vw;
   border-radius: 14px;
 }
 
@@ -562,9 +562,9 @@ a {
   color: #ffffff;
 }
 .hosting__description {
-  width: 384px;
-  height: 480px;
-  padding: 0 80px;
+  width: 25.2vw;
+  height: 31.5vw;
+  padding: 0 5.2vw;
   position: absolute;
   top: 0;
   display: flex;
@@ -573,7 +573,7 @@ a {
 }
 
 .hosting__title {
-  font-size: 48px;
+  font-size: 3.1vw;
   font-weight: 600;
 }
 
@@ -585,27 +585,27 @@ a {
 
 .hosting__button {
   margin-top: 40px;
-  width: 163px;
-  height: 48px;
+  width: 10.7vw;
+  height: 3.1vw;
   background-color: #ffffff;
   color: #222222;
   border-radius: 8px;
   text-align: center;
-  line-height: 48px;
-  font-size: 16px;
+  line-height: 3.1vw;
+  font-size: 1vw;
   font-weight: 600;
 }
 
 /* enjoy */
 
 .enjoy {
-  margin-top: 50px;
-  padding: 0 80px;
+  margin-top: 3.2vw;
+  padding: 0 5.2vw;
 }
 
 .enjoy__container {
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 5.2vw;
 }
 
 .enjoy__section {
@@ -618,14 +618,14 @@ a {
 
 .enjoy__image {
   margin-bottom: 6px;
-  width: 440px;
-  height: 440px;
+  width: 28.9vw;
+  height: 28.9vw;
   border-radius: 8px;
 }
 
 .enjoy__title {
   margin-bottom: 8px;
-  font-size: 18px;
+  font-size: 1.1vw;
   font-weight: 600;
 }
 
@@ -729,12 +729,17 @@ svg {
 }
 
 @media screen and (max-width: 769px) {
+  h1 {
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+  }
   .main {
     height: 133vh;
   }
   .navbar,
   .search,
-  .navbar__fixed {
+  .navbar__fixed,
+  .contact {
     display: none;
   }
   .container {
@@ -771,5 +776,35 @@ svg {
   .title__button {
     width: 157px;
     height: 49px;
+  }
+
+  /* city */
+
+  .lookAround {
+    padding: 36px 0 20px 20px;
+  }
+  .lookAround__city {
+    overflow-x: auto;
+    grid-template-columns: repeat(4, 80%);
+  }
+  .lookAround__city::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* option */
+
+  .option {
+    margin: 0;
+    padding: 0 24px;
+  }
+  .option__container {
+    overflow-x: auto;
+  }
+  .option__container::-webkit-scrollbar {
+    display: none;
+  }
+  .option__image {
+    width: 35.4em;
+    height: 37.2em;
   }
 }
