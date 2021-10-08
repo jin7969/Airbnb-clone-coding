@@ -5,13 +5,9 @@ import Search from "./search";
 import Container from './container';
 import HomeNavbar from './home_navbar';
 import Quarantine from './quarantine';
-import { useMediaQuery } from 'react-responsive';
 import ResSearch from './ResSearch';
 
-function Home() {
-  const responsive = useMediaQuery({
-    query: "(max-width:767px)"
-  });
+function Home({ responsive }) {
   const [fixed, setFixed] = useState(false);
   const [type, setType] = useState("");
   const searchRef = useRef();
