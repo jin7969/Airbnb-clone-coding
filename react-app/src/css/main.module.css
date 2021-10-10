@@ -783,8 +783,6 @@ svg {
     align-items: center;
     padding-top: 30px;
   }
-  .contact__settingAndIcon {
-  }
 }
 
 @media screen and (max-width: 769px) {

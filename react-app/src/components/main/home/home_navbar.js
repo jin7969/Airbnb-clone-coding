@@ -21,7 +21,7 @@ function HomeNavbar() {
         <li className={styles.navbar__menu__item}>온라인 체험</li>
       </ul>
       <div className={styles.navbar__contact}>
-        <Link to="/host">호스트 되기</Link>
+        <Link to="/mode">호스트 모드로 전환</Link>
         <svg
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
