@@ -1,6 +1,7 @@
 import React from "react";
+import NavIcon from "./hosting/NavIcon";
 import styles from "./navbar.module.css";
-function Navbar() {
+function Navbar({ res }) {
   return (
     <div className={styles.navbar}>
       <div className={styles.logo}>
@@ -18,8 +19,7 @@ function Navbar() {
         </ul>
       </nav>
       <div className={styles.user}>
-        <i className="far fa-bell"></i>
-        <i className="fas fa-user"></i>
+        {res ? <i className="fas fa-bars"></i> : <NavIcon />}
       </div>
     </div>
   );

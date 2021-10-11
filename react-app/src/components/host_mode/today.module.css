@@ -37,3 +37,16 @@
 .subTitle {
   margin: 16px 0;
 }
+
+@media screen and (max-width: 769px) {
+  .today {
+    height: 260px;
+  }
+  .subTitle {
+    line-height: 34px;
+  }
+  .title button {
+    position: absolute;
+    top: 39%;
+  }
+}

@@ -64,3 +64,12 @@
   background-color: #717171;
   font-size: 20px;
 }
+
+@media screen and (max-width: 769px) {
+  .menu {
+    display: none;
+  }
+  .user i:last-child {
+    background-color: #ffffff;
+  }
+}

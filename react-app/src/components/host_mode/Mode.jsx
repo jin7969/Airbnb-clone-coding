@@ -4,11 +4,15 @@ import HostingTip from "./hosting/HostingTip";
 import Navbar from "./Navbar";
 import Reservation from "./Reservation";
 import Today from "./Today";
+import { useMediaQuery } from "react-responsive";
 
 function Mode() {
+  const res = useMediaQuery({
+    query: "(max-width:769px)",
+  });
   return (
     <>
-      <Navbar />
+      <Navbar res={res} />
       <Today />
       <Reservation />
       <HostingTip />
