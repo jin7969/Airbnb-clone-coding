@@ -1,12 +1,14 @@
 import React from "react";
 import NavIcon from "./hosting/NavIcon";
 import styles from "./navbar.module.css";
+import { Link } from "react-router-dom";
+
 function Navbar({ res }) {
   return (
     <div className={styles.navbar}>
-      <div className={styles.logo}>
+      <Link to="/" className={styles.logo}>
         <i className="fab fa-airbnb"></i>
-      </div>
+      </Link>
       <nav>
         <ul className={styles.menu}>
           <li className={styles.item}>투데이</li>
