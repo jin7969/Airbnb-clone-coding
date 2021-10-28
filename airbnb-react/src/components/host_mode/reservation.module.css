@@ -1,0 +1,27 @@
+.reservation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 560px;
+}
+.image {
+  width: 84.26vw;
+  height: 432px;
+  border-radius: 14px;
+  background: url("https://a0.muscache.com/im/pictures/cd29ad57-8934-4075-9d5c-6578863fb1dd.jpg?im_w=2560")
+    bottom/cover no-repeat;
+}
+
+.title h1 {
+  font-size: 26px;
+  padding-top: 24px;
+  padding-bottom: 18px;
+}
+
+@media screen and (max-width: 769px) {
+  .image {
+    width: 90%;
+    height: 85%;
+  }
+}

@@ -1,0 +1,22 @@
+body {
+  overflow-x: hidden;
+}
+body.activeModal {
+  overflow-y: hidden;
+}
+
+.slick-arrow {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.slick-arrow.slick-next {
+  right: 5%;
+}
+.slick-arrow.slick-prev {
+  z-index: 1;
+  left: 5%;
+}

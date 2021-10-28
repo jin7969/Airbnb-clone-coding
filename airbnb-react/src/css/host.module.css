@@ -1,0 +1,480 @@
+.hostPage h1 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 70px;
+  margin-bottom: 15px;
+}
+
+.hostPage video {
+  width: 759px;
+  height: 722px;
+}
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+.logo {
+  margin-left: 34px;
+}
+
+.logo i {
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 38px;
+  border-radius: 50%;
+  color: #000000;
+}
+
+.logo i:hover {
+  background-color: rgb(247, 247, 247);
+}
+
+.hostingBtn {
+  width: 163px;
+  height: 48px;
+  margin-right: 46px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #e41d5e;
+  cursor: pointer;
+}
+
+/* main */
+.main {
+  display: flex;
+}
+.main__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 759px;
+  height: 722px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.main__logo {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 38px;
+  top: 0.5em;
+  left: 0.5em;
+}
+
+.main__logo:hover {
+  border-radius: 50%;
+  background-color: rgb(57, 58, 59);
+}
+
+.main__title {
+  text-align: center;
+}
+
+.main__title h1 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.main__logo i {
+  color: #ffffff;
+}
+
+.main__button {
+  width: 163px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border-style: none;
+  color: #ffffff;
+  background-color: #e41d5e;
+}
+
+.main__arrow {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  position: relative;
+  top: 116px;
+}
+
+.main__arrow:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgb(57, 58, 59);
+}
+
+.main__right {
+  position: relative;
+}
+
+.main__video__title {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 40vh;
+}
+
+.main__video__description {
+  position: absolute;
+  bottom: 48px;
+  left: 8%;
+}
+
+.main__play__button {
+  width: 40px;
+  height: 40px;
+  border-style: none;
+  color: #ffffff;
+  background-color: rgba(48, 47, 47, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 180px;
+  left: 8%;
+}
+
+.main__video__image {
+  width: 139px;
+  height: 56px;
+  margin-bottom: 16px;
+}
+
+.main__video__text {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* place */
+
+.place {
+  width: 1471px;
+  height: 1028px;
+  padding: 160px 0 80px 48px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#ffffff 54%, #000000 46%);
+}
+
+.place__container {
+  display: flex;
+  width: 2892px;
+  padding-top: 20px;
+  margin-top: 60px;
+  transition: all 300ms ease-in;
+}
+
+.place__section {
+  width: 482px;
+  height: 812px;
+  padding-right: 18px;
+}
+
+.place__image img {
+  margin-right: 0;
+  width: 464px;
+  height: 536px;
+  border-radius: 4px;
+}
+
+.place__title {
+  padding-right: 24px;
+}
+
+.place__description {
+  color: #ddd;
+  font-size: 26px;
+  line-height: 30px;
+  margin-top: 48px;
+  margin-bottom: 34px;
+  padding-right: 24px;
+}
+
+.place__title img {
+  height: 32px;
+}
+
+.place__text {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b0b0b0;
+}
+
+.place__button {
+  color: #ffffff;
+  position: absolute;
+  bottom: 120px;
+  left: 60%;
+}
+
+.place__button i {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  font-size: 14px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  background-color: #444444;
+}
+
+.place__button i:hover {
+  cursor: pointer;
+  background-color: #363434;
+}
+
+.hidden {
+  display: none;
+}
+
+/* income */
+
+.income {
+  width: 1519px;
+  height: 1017px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.income__setting {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  margin-bottom: 28px;
+  padding-top: 160px;
+}
+
+.income__question {
+  margin-bottom: 32px;
+}
+
+.income__question h2 {
+  color: #b0b0b0;
+}
+
+.question__choice select {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background: transparent;
+  color: #ffffff;
+  border-style: none;
+  border-radius: 4px;
+  text-decoration: underline;
+}
+
+.question__choice option {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.question__answer {
+  display: flex;
+  padding-top: 19px;
+}
+
+.income__method button {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  background-color: transparent;
+  color: #ddd;
+  border-style: none;
+}
+
+.income__raising button {
+  width: 131px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #e41c59;
+  border-radius: 8px;
+  border: none;
+  margin-top: 90px !important;
+  margin-bottom: 180px !important;
+}
+
+/* data */
+
+.data {
+  width: 1423px;
+  height: 637px;
+  margin-top: 160px;
+  margin-bottom: 216px;
+  padding: 0 48px;
+}
+
+.data__container {
+  margin-top: 64px;
+  display: flex;
+}
+
+.data__section img {
+  width: 453px;
+  height: 338px;
+  border-radius: 12px;
+}
+
+.data__section {
+  margin: 0 11px;
+  padding: 16px 0;
+}
+
+.data__title {
+  margin-top: 16px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.data__title i {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.data__section:hover i {
+  margin-left: 12px;
+  transition: all 100ms ease-in;
+}
+
+/* hosting */
+
+.hosting {
+  display: flex;
+  position: relative;
+}
+
+.hosting__play__button {
+  position: absolute;
+  left: 40px;
+  bottom: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-style: none;
+  color: #ffffff;
+  background-color: rgba(48, 47, 47, 0.5);
+}
+
+.hosting__right {
+  width: 759px;
+  height: 722px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.hosting__right h2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+  text-align: center;
+}
+
+.hosting__subtitle {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.hosting__button {
+  font-size: 16px;
+  font-weight: 600;
+  width: 112px;
+  height: 48px;
+  margin: 48px;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #e41d5e;
+  border-style: none;
+}
+
+.modalBack,
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 780px;
+  height: 464px;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  z-index: 2;
+}
+
+.modal__desc {
+  width: 715px;
+  height: 346px;
+  margin: auto;
+  padding: 24px 16px;
+}
+
+.modal__desc h2 {
+  margin-top: 68px;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.modal__button {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  border-radius: 50%;
+}
+.modal__desc p {
+  margin: 16px 0;
+}
+.modal__desc ul {
+  padding-left: 40px;
+  margin: 16px 0;
+  list-style: disc;
+}
+.modal__desc a {
+  font-weight: 600;
+  text-decoration: underline;
+}
