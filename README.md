@@ -10,11 +10,13 @@
 ## ⭐️ 구현기능
 
 ### 페이지 이동
-+ router를 이용하여 해당 페이지로 이동이 가능하다
++ router를 이용하여 해당 페이지로 이동이 가능합니다.
+
 ![페이지이동](https://user-images.githubusercontent.com/82227098/141239571-c43c5ddc-1f51-446d-870a-0c98ba7b1ab4.gif)
 
 ### 동영상 재생
 + 영상이 자동 재생되고, 버튼 클릭시 정지,재생 구현, 영상이 끝나면 아이콘이 변경됩니다.
+
 ![영상재생](https://user-images.githubusercontent.com/82227098/141240628-c5b418ba-071a-4536-9904-f51fa51504fd.gif)
 
 
